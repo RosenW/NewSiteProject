@@ -13,12 +13,16 @@ import java.util.Set;
 @Table(name = "users")
 public class User implements UserDetails {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
     private String password;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "users_roles")
     private Set<Role> roles;
 
     public User(String username, String password) {
@@ -31,8 +35,7 @@ public class User implements UserDetails {
         this.roles = new HashSet<>();
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Long getId() {
         return id;
     }
@@ -46,8 +49,7 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "users_roles")
+
     public Set<Role> getRoles() {
         return roles;
     }

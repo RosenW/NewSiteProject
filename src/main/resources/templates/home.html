@@ -3,12 +3,84 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <link th:href="@{/css/navbar.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/table.css}" rel="stylesheet" type="text/css"/>
     <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8"/>
     <title>Home</title>
 </head>
 <body>
 <header th:include="navbar"></header>
+<div th:text="|Coordinates: ${coordinates.getX()} ${coordinates.getY()}|">
+    <br/>
+
+</div>
+<div class="col-12 offset-3">
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th><a id="up-arrow-link" th:href="|../../map/${coordinates.getX()}/${coordinates.moveUp()}|"><img src="https://i.imgur.com/evAyAoG.png"></a></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th><a id="left-arrow-link" th:href="|../../map/${coordinates.moveLeft()}/${coordinates.getY()}|"><img src="https://i.imgur.com/p2InoC7.png"></a></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><a id="right-arrow-link" th:href="|../../map/${coordinates.moveRight()}/${coordinates.getY()}|"><img src="https://i.imgur.com/HKYU0B6.png"></a></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th><a id="down-arrow-link" th:href="|../../map/${coordinates.getX()}/${coordinates.moveDown()}|"><img src="https://i.imgur.com/wU7sIq0.png"></a></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+</div>
 <script th:src="@{/jquery/jquery.min.js}" rel="stylesheet"></script>
 <script th:src="@{/bootstrap/js/bootstrap.min.js}" rel="stylesheet"></script>
 </body>
