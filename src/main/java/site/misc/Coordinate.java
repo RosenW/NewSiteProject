@@ -12,7 +12,7 @@ public class Coordinate {
     }
 
     public int moveRight() {
-        if (x == size) {
+        if (x == size-1) {
             return 0;
         } else {
             return this.getX() + 1;
@@ -21,7 +21,7 @@ public class Coordinate {
 
     public int moveLeft() {
         if (x == 0) {
-            return size;
+            return size-1;
         } else {
             return this.getX() - 1;
         }
@@ -29,14 +29,14 @@ public class Coordinate {
 
     public int moveUp() {
         if (y == 0) {
-            return size;
+            return size-1;
         } else {
             return this.getY() - 1;
         }
     }
 
     public int moveDown() {
-        if (y == size) {
+        if (y == size-1) {
             return 0;
         } else {
             return this.getY()+1;

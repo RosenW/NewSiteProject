@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface TownService {
     List<TownModel> findAll();
+
+    void save(TownModel townModel);
 }

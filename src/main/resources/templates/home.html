@@ -14,67 +14,71 @@
     <br/>
 
 </div>
-<div class="col-12 offset-3">
+<div class="col-9 offset-3">
     <table>
         <tr>
             <th></th>
             <th></th>
             <th></th>
-            <th><a id="up-arrow-link" th:href="|../../map/${coordinates.getX()}/${coordinates.moveUp()}|"><img src="https://i.imgur.com/evAyAoG.png"></a></th>
+            <th><a id="up-arrow-link" th:href="|../../map/${coordinates.getX()}/${coordinates.moveUp()}|"><img
+                    src="https://i.imgur.com/evAyAoG.png"></a></th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/0/0|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),0,0)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/1/0|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),1,0)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/2/0|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),2,0)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/3/0|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),3,0)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/4/0|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),4,0)}"></a></th>
             <th></th>
         </tr>
         <tr>
             <th></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/0/1|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),0,1)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/1/1|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),1,1)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/2/1|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),2,1)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/3/1|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),3,1)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/4/1|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),4,1)}"></a></th>
             <th></th>
         </tr>
         <tr>
-            <th><a id="left-arrow-link" th:href="|../../map/${coordinates.moveLeft()}/${coordinates.getY()}|"><img src="https://i.imgur.com/p2InoC7.png"></a></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><a id="right-arrow-link" th:href="|../../map/${coordinates.moveRight()}/${coordinates.getY()}|"><img src="https://i.imgur.com/HKYU0B6.png"></a></th>
+            <th><a id="left-arrow-link" th:href="|../../map/${coordinates.moveLeft()}/${coordinates.getY()}|"><img
+                    src="https://i.imgur.com/p2InoC7.png"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/0/2|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),0,2)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/1/2|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),1,2)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/2/2|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),2,2)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/3/2|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),3,2)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/4/2|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),4,2)}"></a></th>
+            <th><a id="right-arrow-link" th:href="|../../map/${coordinates.moveRight()}/${coordinates.getY()}|"><img
+                    src="https://i.imgur.com/HKYU0B6.png"></a></th>
         </tr>
         <tr>
             <th></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
-            <th><img src="https://i.imgur.com/tR0Sofi.png"></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/0/3|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),0,3)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/1/3|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),1,3)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/2/3|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),2,3)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/3/3|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),3,3)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/4/3|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),4,3)}"></a></th>
             <th></th>
         </tr>
         <tr>
             <th></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/0/4|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),0,4)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/1/4|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),1,4)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/2/4|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),2,4)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/3/4|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),3,4)}"></a></th>
+            <th><a th:href="|../../square/${coordinates.getX()}/${coordinates.getY()}/4/4|"><img th:src="${imgs.getImage(coordinates.getX(),coordinates.getY(),4,4)}"></a></th>
+            <th></th>
+        </tr>
+        <tr>
             <th></th>
             <th></th>
-            <th><a id="down-arrow-link" th:href="|../../map/${coordinates.getX()}/${coordinates.moveDown()}|"><img src="https://i.imgur.com/wU7sIq0.png"></a></th>
+            <th></th>
+            <th><a id="down-arrow-link" th:href="|../../map/${coordinates.getX()}/${coordinates.moveDown()}|"><img
+                    src="https://i.imgur.com/wU7sIq0.png"></a></th>
             <th></th>
             <th></th>
             <th></th>

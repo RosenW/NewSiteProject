@@ -18,7 +18,7 @@
         </div>
         <div th:if="${error != null}" th:text="${error}"></div>
         <form method="post">
-            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color: black"></span>
@@ -40,7 +40,17 @@
                            placeholder="Repeat Password"/>
                 </div>
             </div>
-            <input id="btnLogin" type="submit" class="btn" style="width: 100%; background-color: black; color: white;" value="Register"/>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" style="background-color: black"></span>
+                    <select class="form-control" id="selectFaction" name="faction">
+                        <option th:each="faction : ${factions}" th:value="${faction}" th:text="${faction}"></option>
+                    </select>
+                </div>
+            </div>
+
+            <input id="btnLogin" type="submit" class="btn" style="width: 100%; background-color: black; color: white;"
+                   value="Register"/>
         </form>
     </div>
 </div>

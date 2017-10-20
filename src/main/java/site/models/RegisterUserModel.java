@@ -1,9 +1,24 @@
 package site.models;
 
+import site.enums.Faction;
+import site.validators.IsPasswordsMatching;
+
 public class RegisterUserModel {
     private String name;
     private String password;
     private String repeatPassword;
+    private Faction faction;
+
+    public RegisterUserModel() {
+    }
+
+    public Faction getFaction() {
+        return faction;
+    }
+
+    public void setFaction(Faction faction) {
+        this.faction = faction;
+    }
 
     public String getRepeatPassword() {
         return repeatPassword;

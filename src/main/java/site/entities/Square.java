@@ -1,28 +1,28 @@
 package site.entities;
 
+import site.enums.LandType;
+
 import javax.persistence.*;
 
+@Table(name = "world")
 @Entity
-@Table(name = "coordinates")
-public class TownCoordinate {
+public class Square {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private int bigX;
     private int bigY;
     private int smallX;
     private int smallY;
+    @Enumerated(EnumType.ORDINAL)
+    private LandType landType;
 
-    public TownCoordinate() {
-    }
-
-    public TownCoordinate(int bigX, int bigY, int smallX, int smallY) {
-        setBigX(bigX);
-        setBigY(bigY);
-        setSmallX(smallX);
-        setSmallY(smallY);
+    public Square(int bx, int by, int sx, int sy) {
+        this.setBigX(bx);
+        this.setBigY(by);
+        this.setSmallX(sx);
+        this.setSmallY(sy);
     }
 
     public long getId() {
@@ -63,5 +63,16 @@ public class TownCoordinate {
 
     public void setSmallY(int smallY) {
         this.smallY = smallY;
+    }
+
+    public LandType getLandType() {
+        return landType;
+    }
+
+    public void setLandType(LandType landType) {
+        this.landType = landType;
+    }
+
+    public Square() {
     }
 }

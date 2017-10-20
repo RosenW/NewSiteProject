@@ -1,6 +1,7 @@
 package site.entities;
 
-import site.enums.Element;
+import site.enums.Faction;
+import site.enums.LandType;
 
 import javax.persistence.*;
 
@@ -11,8 +12,13 @@ public class Town {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Enumerated(EnumType.ORDINAL)
-    private Element element;
+    private String name;
+
+    @Enumerated(EnumType.STRING)
+    private Faction faction;
+
+    @Enumerated(EnumType.STRING)
+    private LandType landType;
 
     @OneToOne
     private TownCoordinate townCoordinate;
@@ -24,6 +30,22 @@ public class Town {
     public Town() {
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LandType getLandType() {
+        return landType;
+    }
+
+    public void setLandType(LandType landType) {
+        this.landType = landType;
+    }
+
     public long getId() {
         return id;
     }
@@ -32,12 +54,12 @@ public class Town {
         this.id = id;
     }
 
-    public Element getElement() {
-        return element;
+    public Faction getFaction() {
+        return faction;
     }
 
-    public void setElement(Element element) {
-        this.element = element;
+    public void setFaction(Faction faction) {
+        this.faction = faction;
     }
 
     public TownCoordinate getTownCoordinate() {

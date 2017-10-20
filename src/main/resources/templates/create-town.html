@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/navbar.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <title>Create Town</title>
+</head>
+<body>
+<header th:include="navbar"></header>
+
+<div class="container col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+    <h1>Create Town</h1>
+    <form method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon" style="background-color: black"></span>
+                <input type="text" class="form-control" name="name"
+                       placeholder="Town Name"/>
+            </div>
+        </div>
+        <input id="btnCreateTown" type="submit" class="btn" style="width: 100%; background-color: black; color: white;"
+               value="Create Town"/>
+    </form>
+</div>
+<script th:src="@{/jquery/jquery.min.js}" rel="stylesheet"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}" rel="stylesheet"></script>
+</body>
+</html>

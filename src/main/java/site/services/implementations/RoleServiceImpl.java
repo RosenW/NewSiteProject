@@ -6,7 +6,10 @@ import site.entities.Role;
 import site.repositories.RoleRepository;
 import site.services.interfaces.RoleService;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class RoleServiceImpl implements RoleService {
 
     private final RoleRepository roleRepository;

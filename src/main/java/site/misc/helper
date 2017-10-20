@@ -1,0 +1,32 @@
+for (int bx = 0; bx < 5; bx++) {
+            for (int by = 0; by < 5; by++) {
+                for (int sx = 0; sx < 5; sx++) {
+                    for (int sy = 0; sy < 5; sy++) {
+                        Square curSquare = new Square(bx, by, sx, sy);
+                        Random random = new Random();
+                        int index = random.nextInt(200);
+
+                        if (index < 140) {
+                            curSquare.setLandType(LandType.STANDARD);
+                        } else if (index < 150) {
+                            curSquare.setLandType(LandType.FOREST);
+                        } else if (index < 160) {
+                            curSquare.setLandType(LandType.CRYSTALFIELD);
+                        } else if (index < 170) {
+                            curSquare.setLandType(LandType.MOUNTAIN);
+                        } else if (index < 180) {
+                            curSquare.setLandType(LandType.GOLDMINE);
+                        } else if (index < 185) {
+                            curSquare.setLandType(LandType.BIGFOREST);
+                        } else if (index < 190) {
+                            curSquare.setLandType(LandType.BIGCRYSTALFIELD);
+                        } else if (index < 195) {
+                            curSquare.setLandType(LandType.BIGGOLDMINE);
+                        } else if (index < 200) {
+                            curSquare.setLandType(LandType.BIGMOUNTAIN);
+                        }
+                        worldService.save(curSquare);
+                    }
+                }
+            }
+        }

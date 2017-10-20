@@ -3,6 +3,7 @@ package site.entities;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import site.enums.Faction;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -20,6 +21,9 @@ public class User implements UserDetails {
     private String name;
 
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Faction faction;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles")
@@ -64,6 +68,14 @@ public class User implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Faction getFaction() {
+        return faction;
+    }
+
+    public void setFaction(Faction faction) {
+        this.faction = faction;
     }
 
     @Transient
